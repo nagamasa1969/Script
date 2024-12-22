@@ -44,5 +44,9 @@ try {
     console.log(result.user.name);
 } catch (error) {
     //失敗時はエラーを取得、関数の中までは確認できなかった。
-    console.log(error);
+    if (error instanceof Error) {
+        console.log(`Error: ${error.message}`);
+    } else {
+        console.log("Unknown error type");
+    }
 }
