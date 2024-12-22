@@ -23,7 +23,6 @@ const getUserInfo = (id: number) => {
   }
 }
 
-//以下別ファイルの考え
 const i = 2;
 try {
     const result = getUserInfo(i);
