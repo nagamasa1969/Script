@@ -24,8 +24,9 @@ const getUserInfo = (id: number) => {
 }
 
 //以下別ファイルの考え
+const i = 2;
 try {
-    const result = getUserInfo(2);
+    const result = getUserInfo(i);
     // 備考: getUserInfoの型は以下のようになっている
     // type Response = {
     //  status: string;
@@ -43,10 +44,7 @@ try {
     //ユーザー名称を取得
     console.log(result.user.name);
 } catch (error) {
-    //失敗時はエラーを取得、関数の中までは確認できなかった。
-    if (error instanceof Error) {
-        console.log(`Error: ${error.message}`);
-    } else {
-        console.log("Unknown error type");
-    }
+    //失敗時はエラーを取得
+    const result2 = getUserInfo(i);
+    console.log(`Error: ${result2.errorLog}`);
 }
